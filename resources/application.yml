@@ -1,0 +1,42 @@
+lemon:
+  datasource:
+    url: jdbc:mysql://localhost:3316/meet2
+    username: root
+    password: root
+
+  mybatis:
+    type-aliases-package: com.lemon.meet.entity.bo
+    base-packages:
+      - com.lemon.meet.dao
+
+  redis:
+    host: localhost
+    port: 6379
+    password: 123456
+
+  swagger:
+    group-name: "lemon"
+    title: "会议管理"
+    enable: true
+    author: "yj"
+    version: "1.0.0"
+spring:
+  resources:
+    static-locations: "classpath:/static/"
+
+  mvc:
+    static-path-pattern: /static/**
+  redis:
+    host: localhost
+    port: 6379
+    password: 123456
+
+
+server:
+  port: 8090
+
+logging:
+  level:
+    com.lemon.meet: debug
+
+
